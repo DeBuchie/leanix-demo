@@ -1,0 +1,19 @@
+$size: 15px;
+
+.languageDotContainer {
+  display: flex;
+  align-items: center;
+}
+
+.languageDot {
+  display: inline-block;
+  height: $size;
+  width: $size;
+  border-radius: ($size / 2);
+  margin-right: 5px;
+}
+
+.languageName {
+  display: inline-block;
+  font-size: $size;
+}

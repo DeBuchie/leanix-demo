@@ -1,0 +1,10 @@
+
+<ng-container *ngIf="language">
+  <span class="languageDotContainer">
+    <span
+      class="languageDot"
+      [ngStyle]="{backgroundColor: language.color}"
+    ></span>
+    <span class="languageName">{{language.name}}</span>
+  </span>
+</ng-container>

@@ -1,0 +1,16 @@
+query Repository($repositoryName:String!, $owner:String!){
+  repository(name: $repositoryName, owner: $owner) {
+    name
+    id
+    collaborators(affiliation: ALL, first: 50) {
+      nodes {
+        ... on User {
+          id
+          name
+          login
+          email
+        }
+      }
+    }
+  }
+}

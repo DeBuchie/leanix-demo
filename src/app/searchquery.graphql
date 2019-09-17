@@ -1,0 +1,17 @@
+query Search($queryString: String!, $type: SearchType!, $first:Int){
+  search(query: $queryString, type:$type, first:$first){
+    nodes {
+      ... on Repository {
+        id
+        nameWithOwner
+        description
+        primaryLanguage {
+          id
+          name
+          color
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.repository-entry {
+  margin-bottom: 20px;
+  &:nth-child(even) {
+    .headline-container {
+      background-color: lime;
+    }
+  }
+  &:nth-child(odd) {
+    .headline-container {
+      background-color: yellow;
+    }
+  }
+  .headline-container {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      padding-right: 5px;
+    }
+  }
+}
+
+

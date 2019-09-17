@@ -1,0 +1,9 @@
+<ng-container *ngFor="let repository of repositories">
+  <div class="repository-entry">
+    <div class="headline-container">
+      <h2>{{repository.nameWithOwner}}</h2>
+      <app-languagedot [language]="repository.primaryLanguage"></app-languagedot>
+    </div>
+    <p>{{repository.description}}</p>
+  </div>
+</ng-container>
