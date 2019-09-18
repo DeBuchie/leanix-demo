@@ -5,9 +5,8 @@ import {InMemoryCache} from 'apollo-cache-inmemory';
 import {ApolloLink} from 'apollo-link';
 import {environment} from '../environments/environment';
 
-const uri = 'https://api.github.com/graphql';
 export function createApollo(httpLink: HttpLink) {
-  const http = httpLink.create({uri: 'https://api.github.com/graphql'});
+  const http = httpLink.create({uri: environment.githubGraphqlAPI_URI});
 
   const authLink = new ApolloLink((operation, forward) => {
     const token = environment.githubToken;

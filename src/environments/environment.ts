@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  githubToken: '7be93b5c8d445f99dece98d9bca60b3024532c07'
+  githubToken: '7be93b5c8d445f99dece98d9bca60b3024532c07',
+  githubGraphqlAPI_URI: 'https://api.github.com/graphql',
+  githubRESTAPI_URI: 'https://api.github.com/'
 };
 
 /*
