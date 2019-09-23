@@ -1,0 +1,15 @@
+<div class="contributer-container">
+  <app-contributer-avatar
+    [avatarURL]="contributer.avatar_url"
+    [username]="contributer.login"
+  ></app-contributer-avatar>
+  <a
+    class="contributer-data"
+    [href]="contributer.html_url">
+    <h3>
+      {{contributer.login}}
+      <span class="contributions">{{contributer.contributions}}</span>
+    </h3>
+  </a>
+</div>
+

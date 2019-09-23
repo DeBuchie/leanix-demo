@@ -1,0 +1,17 @@
+<p
+  class="back-link"
+  (click)="goBack()">
+  <fa-icon
+    [icon]="['fas', 'chevron-left']"
+    (click)="goBack()"
+  ></fa-icon>
+  Back to repository overview
+</p>
+
+<h1>Contributers <span class="contributer-count">{{contributerCount}}</span></h1>
+<div class="contributers-container">
+  <ng-container *ngFor="let contributer of contributers">
+    <app-contributer [contributer]="contributer"></app-contributer>
+  </ng-container>
+</div>
+
