@@ -1,0 +1,25 @@
+.repository-entry {
+  margin-bottom: 20px;
+  width: 80vw;
+  .headline-container {
+    display: flex;
+    align-items: center;
+    h2 {
+      padding-right: 5px;
+      margin: 0;
+    }
+  }
+  .data-container {
+    width: 50%;
+  }
+  .repository-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    & > * {
+      margin-left: 10px;
+    }
+  }
+}
+
+

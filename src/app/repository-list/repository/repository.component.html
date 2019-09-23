@@ -1,0 +1,25 @@
+<div class="repository-entry">
+  <div class="headline-container">
+    <a [routerLink]="repositoryDetailsLink">
+      <h2>{{repository.nameWithOwner}}</h2>
+    </a>
+  </div>
+  <div class="data-container">
+    <p>{{repository.description}}</p>
+    <div class="topics-container">
+      <ng-container *ngFor="let topic of repository.repositoryTopics.nodes">
+        <app-topic [topic]="topic"></app-topic>
+      </ng-container>
+
+    </div>
+  </div>
+  <div class="repository-footer">
+    <app-languagedot *ngIf="repository.primaryLanguage" [language]="repository.primaryLanguage"></app-languagedot>
+    <app-license-info *ngIf="repository.licenseInfo" [license]="repository.licenseInfo"></app-license-info>
+    <app-fork-info *ngIf="repository.forkCount" [forkCount]="repository.forkCount"></app-fork-info>
+    <app-starred-info *ngIf="repository.stargazers" [starcount]="repository.stargazers.totalCount"></app-starred-info>
+    <app-issues-info *ngIf="repository.issues" [issuesCount]="repository.issues.totalCount"></app-issues-info>
+    <span>{{repository.updatedAt}}</span>
+  </div>
+</div>
+<hr>

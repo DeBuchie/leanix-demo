@@ -19,7 +19,7 @@ export class RepositoryListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.searchSubscription = this.searchService.getFirstFiftyPublicRepositories()
       .subscribe(({data}) => {
-        data.search.nodes.map((node: RepositoryView) => this.repositories.push(node));
+        data.search.nodes.map((node) => this.repositories.push(node as RepositoryView));
       });
   }
 

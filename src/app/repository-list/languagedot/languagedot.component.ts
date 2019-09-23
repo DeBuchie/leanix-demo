@@ -15,4 +15,11 @@ export class LanguagedotComponent implements OnInit {
   ngOnInit() {
   }
 
+  public get languageColor(): string {
+    if (this.language !== null && this.language.color) {
+      return this.language.color;
+    }
+    return '#ccc';
+  }
+
 }

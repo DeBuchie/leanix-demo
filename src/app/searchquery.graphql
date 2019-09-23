@@ -5,6 +5,39 @@ query Search($queryString: String!, $type: SearchType!, $first:Int){
         id
         nameWithOwner
         description
+        shortDescriptionHTML
+        repositoryTopics(first: 50) {
+          nodes {
+            ... on RepositoryTopic {
+              id
+              resourcePath
+              topic {
+                id
+                name
+              }
+              url
+            }
+          }
+        }
+        forkCount
+        updatedAt
+        stargazers {
+          totalCount
+        }
+        issues(filterBy: {states: [OPEN]}) {
+          totalCount
+        }
+        licenseInfo {
+          id
+          nickname
+          name
+          spdxId
+        }
+        owner {
+          id
+          login
+        }
+        name
         primaryLanguage {
           id
           name
@@ -12,6 +45,15 @@ query Search($queryString: String!, $type: SearchType!, $first:Int){
         }
       }
 
+    }
+    edges {
+      cursor
+    }
+    pageInfo {
+      endCursor
+      startCursor
+      hasNextPage
+      hasPreviousPage
     }
   }
 }
